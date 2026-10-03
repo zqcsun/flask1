@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card movie-card p-4">
+    <h2 class="fw-bold text-gradient mb-3">{{ movie.title }}</h2>
+    <hr class="border-secondary">
+    <p><b>Рік:</b> {{ movie.year }}</p>
+    <p><b>Жанр:</b> {{ movie.genre }}</p>
+    <p><b>Опис:</b> {{ movie.discription }}</p>
+    <a href="{{ url_for('index') }}" class="btn btn-gradient mt-3">⬅ Назад</a>
+</div>
+{% endblock %}

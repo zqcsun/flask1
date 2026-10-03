@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-gradient mb-3">Найкращі фільми для вас</h2>
+<p class="text-center text-secondary mb-5">Обирайте та насолоджуйтесь кіно у будь-який час 🎬</p>
+
+<div class="row g-4">
+    {% for movie in movies %}
+        <div class="col-md-4">
+            <div class="card movie-card h-100">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold text-light">{{ movie.title }}</h4>
+                    <p class="card-subtitle text-info mb-2">{{ movie.year }}</p>
+                    <p class="card-text small text-light-50">{{ movie.discription }}</p>
+                    <a href="{{ url_for('movie_detail', movie_id=movie.id) }}" class="btn btn-gradient mt-3">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

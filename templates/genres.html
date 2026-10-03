@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-gradient mb-4">Жанри</h2>
+<ul class="list-group list-group-flush">
+    {% for g in genres %}
+        <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-center">
+            <a href="{{ url_for('genre_movie', genre_name=g) }}" class="text-decoration-none text-gradient">
+                {{ g }}
+            </a>
+            <span class="badge bg-gradient text-dark">🎬</span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

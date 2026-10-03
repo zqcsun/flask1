@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-gradient mb-4">Додати новий фільм</h2>
+
+<form method="POST" class="bg-dark p-4 rounded-4 shadow-lg border border-secondary">
+    <div class="mb-3">
+        <label class="form-label text-light">Назва</label>
+        <input type="text" name="title" class="form-control bg-secondary text-light border-0" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label text-light">Рік</label>
+        <input type="number" name="year" class="form-control bg-secondary text-light border-0" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label text-light">Жанр</label>
+        <input type="text" name="genre" class="form-control bg-secondary text-light border-0" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label text-light">Опис</label>
+        <textarea name="description" rows="3" class="form-control bg-secondary text-light border-0" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-gradient w-100">Додати</button>
+</form>
+{% endblock %}

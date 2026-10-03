@@ -1,0 +1,54 @@
+/* --- Основні кольори --- */
+:root {
+    --blue: #1a73e8;
+    --red: #ff3366;
+    --purple: #8b5cf6;
+}
+
+/* --- Фон навбару --- */
+.movie-navbar {
+    background: linear-gradient(90deg, var(--blue), var(--red), var(--purple));
+}
+
+/* --- Градієнтний текст --- */
+.text-gradient {
+    background: linear-gradient(90deg, var(--blue), var(--red), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Картки фільмів --- */
+.movie-card {
+    background: linear-gradient(135deg, rgba(20,20,40,0.95), rgba(40,0,60,0.9));
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+/* --- Градієнтні кнопки --- */
+.btn-gradient {
+    background: linear-gradient(90deg, var(--blue), var(--red), var(--purple));
+    border: none;
+    color: #fff !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-gradient:hover {
+    filter: brightness(1.2);
+    transform: scale(1.03);
+}
+
+/* --- Інше --- */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-text {
+    color: rgba(255, 255, 255, 0.8);
+}

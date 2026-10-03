@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-gradient mb-4">Фільми жанру: {{ genre }}</h2>
+
+{% if movie %}
+    <div class="row g-4">
+        {% for m in movie %}
+            <div class="col-md-4">
+                <div class="card movie-card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-light">{{ m.title }}</h4>
+                        <p class="text-info">{{ m.year }}</p>
+                        <a href="{{ url_for('movie_detail', movie_id=m.id) }}" class="btn btn-gradient">Переглянути</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-warning mt-4 text-center">Фільмів цього жанру поки немає 😢</div>
+{% endif %}
+{% endblock %}
